@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EMPLOYEE REGISTRATION FORM</title>
+    </head>
+    <body style="color: rgb(235, 133, 17);">
+        <h1 align="center"> EMPLOYEE REGISTRATION FORM</h1>
+        <form style="color: rgb(252, 10, 10);" action="/register" method="POST">
+            <style>
+    form {
+        background-color: lightblue;
+        padding: 70px;
+        width: 500px;
+        margin: auto;
+        border-radius: 10px;
+        }
+            </style>
+            <label>FULL NAME:  </label>
+            <input type="text"  name="fullname" placeholder="ENTER YOUR NAME" id="name">
+            <br></br>
+            <label>USERNAME:  </label>
+            <input type="text" name="username" placeholder="ENTER USERNAME" id="username">
+            <br></br>
+            <label>EMAIL:  </label>
+            <input type="email" name="email" placeholder="gmail.com" id="email">
+            <br></br>
+            <label>PASSWORD:</label>
+            <input type="password" name="password" placeholder="password" id="password">
+            <br></br>
+            <!-- <label>CONFIRM PASSWORD:</label>
+            <input type="password" name="confirm password" placeholder="password">
+            <br></br> -->
+            <label>PHONE NO:</label>
+            <input type="tel" name="phone" placeholder="number" id="phone">
+            <br></br>
+            <label>DATE OF BIRTH:</label>
+            <input type="date" name="dob" placeholder="DOC" id="dob">
+            <br></br>
+            <label>GENDER:</label>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Other">Other
+            <br></br>
+            <label>ADDRESS:</label>
+            <textarea name="address" rows="2" cols="30"></textarea>
+            <br></br>
+            <label>CITY:</label>
+            <input type="text" name="city" placeholder="city">
+            <br></br>
+            <label for="STATE">STATE:</label>
+            <select id="state" name="state">
+    <option value="">-- Select State --</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+            </select>
+            <br></br>
+            <label for="country">COUNTRY:</label>
+            <select id="country" name="country">
+    <option value="">-- Select Country --</option>
+    <option value="Afghanistan">Afghanistan</option>
+    <option value="Albania">Albania</option>
+    <option value="Algeria">Algeria</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Australia">Australia</option>
+    <option value="Austria">Austria</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Belgium">Belgium</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Canada">Canada</option>
+    <option value="China">China</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Egypt">Egypt</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+    <option value="Greece">Greece</option>
+    <option value="India">India</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Ireland">Ireland</option>
+    <option value="Italy">Italy</option>
+    <option value="Japan">Japan</option>
+    <option value="Malaysia">Malaysia</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="New Zealand">New Zealand</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Philippines">Philippines</option>
+    <option value="Russia">Russia</option>
+    <option value="Saudi Arabia">Saudi Arabia</option>
+    <option value="Singapore">Singapore</option>
+    <option value="South Africa">South Africa</option>
+    <option value="South Korea">South Korea</option>
+    <option value="Spain">Spain</option>
+    <option value="Sri Lanka">Sri Lanka</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Thailand">Thailand</option>
+    <option value="Turkey">Turkey</option>
+    <option value="United Arab Emirates">United Arab Emirates</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="United States">United States</option>
+    <option value="Vietnam">Vietnam</option>
+            </select>
+            <br></br>
+            <label>PINCODE:</label>
+            <input type="number" name="pincode">
+            <br></br>
+            <!-- <label>UPLOAD PROFILE PIC:</label>
+            <input type="file" name="upload profile pic" >
+            <br></br> -->
+            <label>HOBBIES:</label>
+            <input type="checkbox" name="hobbies" value="Reading">Reading
+            <input type="checkbox" name="hobbies" value="Artist">Artist
+            <input type="checkbox" name="hobbies" value="Singing">Singing
+            <input type="checkbox" name="hobbies" value="Dancing">Dancing
+            <input type="checkbox" name="hobbies" value="playing">Playing
+            <br></br>
+            <label>TERMS AND CONDITIONS:</label>
+            <br></br>
+            <input type="checkbox" name="terms and conditions" value="2 years experience">2 years experience
+            <br></br>
+            <input type="checkbox" name="terms and conditions" value="Need to maintain confidentiality the company">Need to maintain confidentiality the company
+            <br></br>
+            <button id="submit" type="submit">REGISTER</button>
+            <button type="reset">RESET</button>
+        </form>
+    
+    </body>
+</html>

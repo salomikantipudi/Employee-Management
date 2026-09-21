@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Employee Management System</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background-color: white;
+            color: black;
+        }
+
+        /* Dark Theme */
+        body.dark {
+            background-color: #222222;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #a7eaf0;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Dark Navbar */
+        body.dark .navbar {
+            background-color: #333333;
+        }
+
+        /* Logo */
+        .logo {
+            color: rgb(247, 113, 4);
+            font-size: 22px;
+            font-weight: bold;
+            margin-right: auto;
+        }
+
+        .theme-buttons {
+            margin-right: 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .theme-buttons a {
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 25px;
+            color: black;
+            background-color: white;
+            border: 1px solid #777777;
+            font-weight: bold;
+        }
+
+        body.dark .theme-buttons a {
+            color: white;
+            background-color: #444444;
+            border: 1px solid #aaaaaa;
+        }
+
+        .theme-buttons a:hover {
+            background-color: black;
+            color: white;
+            border-color:#00bcd4;
+        }
+
+        /* Navigation links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(71, 3, 243);
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        body.dark .nav-links a {
+            color: white;
+        }
+
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        /* Login button */
+        .login-btn {
+            border: 1px solid #00bcd4;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .login-btn:hover {
+            background-color: #00bcd4;
+            color: white !important;
+        }
+
+        /* Register button */
+        .register-btn {
+            background-color: #00bcd4;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .register-btn:hover {
+            background-color: #0097a7;
+            color: white !important;
+        }
+
+        /* Logout button */
+        .logout-btn {
+            background-color: #f44336;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        /* Content */
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body class="{{ theme }}">
+    <nav class="navbar">
+        <div class="logo">
+            Employee Management System
+        </div>
+        <div class="theme-buttons">
+            <a href="/set-theme/light">
+                ☀ Light
+            </a>
+            <a href="/set-theme/dark">
+                🌙 Dark
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="/employees">Employees</a>
+            </li>
+
+            <li>
+                <a href="/add">Add Employee</a>
+            </li>
+
+            {% if session.get("user_id") %}
+
+            <li>
+                Welcome {{ session.get("fullname") }}
+            </li>
+
+            <li>
+                <a href="/logout" class="logout-btn">Logout</a>
+            </li>
+
+            {% else %}
+
+            <li>
+                <a href="/login" class="login-btn">Login</a>
+            </li>
+
+            <li>
+                <a href="/register" class="register-btn">Register</a>
+            </li>
+
+            {% endif %}
+
+        </ul>
+
+    </nav>
+
+    <div class="content">
+
+        <h1>Welcome to Employee Management System</h1>
+
+        <p>Manage your employees easily.</p>
+
+    </div>
+
+</body>
+
+</html>
